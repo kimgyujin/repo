@@ -1,0 +1,51 @@
+# nnet3-train --use-gpu=yes --read-cache=exp/nnet3/tdnn_lstm1c_sp/cache.471 --write-cache=exp/nnet3/tdnn_lstm1c_sp/cache.472 --print-interval=10 --momentum=0.5 --max-param-change=2.0 --backstitch-training-scale=0.0 --l2-regularize-factor=0.5 --backstitch-training-interval=1 --srand=471 --optimization.min-deriv-time=-20 --optimization.max-deriv-time-relative=30 "nnet3-copy --learning-rate=6.51574264642e-05 --scale=1.0 exp/nnet3/tdnn_lstm1c_sp/471.mdl - |nnet3-copy --edits='set-dropout-proportion name=* proportion=0.0214876033058' - - |" "ark,bg:nnet3-copy-egs               ark:exp/nnet3/tdnn_lstm1c_sp/egs/egs.96.ark ark:- |             nnet3-shuffle-egs --buffer-size=5000             --srand=471 ark:- ark:- |              nnet3-merge-egs --minibatch-size=128,64 ark:- ark:- |" exp/nnet3/tdnn_lstm1c_sp/472.1.raw 
+# Started at Thu Jul 30 13:07:56 KST 2020
+#
+nnet3-train --use-gpu=yes --read-cache=exp/nnet3/tdnn_lstm1c_sp/cache.471 --write-cache=exp/nnet3/tdnn_lstm1c_sp/cache.472 --print-interval=10 --momentum=0.5 --max-param-change=2.0 --backstitch-training-scale=0.0 --l2-regularize-factor=0.5 --backstitch-training-interval=1 --srand=471 --optimization.min-deriv-time=-20 --optimization.max-deriv-time-relative=30 "nnet3-copy --learning-rate=6.51574264642e-05 --scale=1.0 exp/nnet3/tdnn_lstm1c_sp/471.mdl - |nnet3-copy --edits='set-dropout-proportion name=* proportion=0.0214876033058' - - |" 'ark,bg:nnet3-copy-egs               ark:exp/nnet3/tdnn_lstm1c_sp/egs/egs.96.ark ark:- |             nnet3-shuffle-egs --buffer-size=5000             --srand=471 ark:- ark:- |              nnet3-merge-egs --minibatch-size=128,64 ark:- ark:- |' exp/nnet3/tdnn_lstm1c_sp/472.1.raw 
+LOG (nnet3-train[5.5.0-]:SelectGpuId():cu-device.cc:223) CUDA setup operating under Compute Exclusive Mode.
+LOG (nnet3-train[5.5.0-]:FinalizeActiveGpu():cu-device.cc:308) The active GPU is [0]: TITAN Xp	free:11808M, used:386M, total:12194M, free/total:0.968337 version 6.1
+nnet3-copy '--edits=set-dropout-proportion name=* proportion=0.0214876033058' - - 
+nnet3-copy --learning-rate=6.51574264642e-05 --scale=1.0 exp/nnet3/tdnn_lstm1c_sp/471.mdl - 
+WARNING (nnet3-copy[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-copy[5.5.0-]:main():nnet3-copy.cc:114) Copied raw neural net from exp/nnet3/tdnn_lstm1c_sp/471.mdl to -
+WARNING (nnet3-copy[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-copy[5.5.0-]:ReadEditConfig():nnet-utils.cc:1397) Set dropout proportions for 3 components.
+LOG (nnet3-copy[5.5.0-]:main():nnet3-copy.cc:114) Copied raw neural net from - to -
+WARNING (nnet3-train[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-train[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-train[5.5.0-]:NnetTrainer():nnet-training.cc:48) Read computation cache from exp/nnet3/tdnn_lstm1c_sp/cache.471
+nnet3-shuffle-egs --buffer-size=5000 --srand=471 ark:- ark:- 
+nnet3-merge-egs --minibatch-size=128,64 ark:- ark:- 
+nnet3-copy-egs ark:exp/nnet3/tdnn_lstm1c_sp/egs/egs.96.ark ark:- 
+WARNING (nnet3-train[5.5.0-]:ReorthogonalizeRt1():natural-gradient-online.cc:241) Cholesky out of expected range, reorthogonalizing with Gram-Schmidt
+WARNING (nnet3-train[5.5.0-]:ReorthogonalizeRt1():natural-gradient-online.cc:241) Cholesky out of expected range, reorthogonalizing with Gram-Schmidt
+WARNING (nnet3-train[5.5.0-]:ReorthogonalizeRt1():natural-gradient-online.cc:241) Cholesky out of expected range, reorthogonalizing with Gram-Schmidt
+WARNING (nnet3-train[5.5.0-]:ReorthogonalizeRt1():natural-gradient-online.cc:241) Cholesky out of expected range, reorthogonalizing with Gram-Schmidt
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 0-9 is -1.10373 over 50982 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 10-19 is -1.12284 over 49683.5 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 20-29 is -1.11773 over 50961.5 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 30-39 is -1.20034 over 48433.5 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 40-49 is -1.12353 over 49673.5 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 50-59 is -1.24551 over 48408.5 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 60-69 is -1.18064 over 49697 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 70-79 is -1.10689 over 47126.5 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 80-89 is -1.2385 over 50980 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 90-99 is -1.1342 over 49683.5 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 100-109 is -1.23713 over 48429 frames.
+LOG (nnet3-copy-egs[5.5.0-]:main():nnet3-copy-egs.cc:431) Read 20708 neural-network training examples, wrote 20708, 0 examples had errors.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 110-119 is -1.14231 over 48394.5 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 120-129 is -1.19232 over 49696.5 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 130-139 is -1.20232 over 51008 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 140-149 is -1.04478 over 45812 frames.
+LOG (nnet3-shuffle-egs[5.5.0-]:main():nnet3-shuffle-egs.cc:103) Shuffled order of 20708 neural-network training examples using a buffer (partial randomization)
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 150-159 is -1.23352 over 47786 frames.
+LOG (nnet3-merge-egs[5.5.0-]:PrintSpecificStats():nnet-example-utils.cc:1159) Merged specific eg types as follows [format: <eg-size1>={<mb-size1>-><num-minibatches1>,<mbsize2>-><num-minibatches2>.../d=<num-discarded>},<egs-size2>={...},... (note,egs-size == number of input frames including context).
+LOG (nnet3-merge-egs[5.5.0-]:PrintSpecificStats():nnet-example-utils.cc:1189) 50={64->1,128->2,d=32},60={128->2,d=28},70={64->1,128->6,d=9},90={64->1,128->4,d=2},100={64->1,128->6,d=12},110={128->139,d=17}
+LOG (nnet3-merge-egs[5.5.0-]:PrintAggregateStats():nnet-example-utils.cc:1155) Processed 20708 egs of avg. size 105.7 into 163 minibatches, discarding 0.4829% of egs.  Avg minibatch size was 126.4, #distinct types of egs/minibatches was 6/10
+LOG (nnet3-train[5.5.0-]:PrintTotalStats():nnet-training.cc:317) Overall average objective function for 'output' is -1.16234 over 791828 frames.
+LOG (nnet3-train[5.5.0-]:PrintTotalStats():nnet-training.cc:324) [this line is to be parsed by a script:] log-prob-per-frame=-1.16234
+LOG (nnet3-train[5.5.0-]:main():nnet3-train.cc:91) Wrote model to exp/nnet3/tdnn_lstm1c_sp/472.1.raw
+LOG (nnet3-train[5.5.0-]:~NnetTrainer():nnet-training.cc:334) Wrote computation cache to exp/nnet3/tdnn_lstm1c_sp/cache.472
+LOG (nnet3-train[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.0116 seconds taken in nnet3 compilation total (breakdown: 0 compilation, 0 optimization, 0 shortcut expansion, 0 checking, 0 computing indexes, 0.0116 misc.) + 0.58 I/O.
+# Accounting: time=24 threads=1
+# Ended (code 0) at Thu Jul 30 13:08:20 KST 2020, elapsed time 24 seconds

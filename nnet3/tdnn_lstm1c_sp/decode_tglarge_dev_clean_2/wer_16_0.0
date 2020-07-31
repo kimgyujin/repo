@@ -1,0 +1,4 @@
+compute-wer --text --mode=present ark:exp/nnet3/tdnn_lstm1c_sp/decode_tglarge_dev_clean_2/scoring/test_filt.txt ark,p:- 
+%WER 9.65 [ 1944 / 20138, 162 ins, 387 del, 1395 sub ]
+%SER 65.93 [ 718 / 1089 ]
+Scored 1089 sentences, 0 not present in hyp.

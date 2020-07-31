@@ -1,0 +1,13 @@
+# nnet3-average exp/nnet3/tdnn_lstm1c_sp/122.1.raw - | nnet3-am-copy --set-raw-nnet=- exp/nnet3/tdnn_lstm1c_sp/121.mdl exp/nnet3/tdnn_lstm1c_sp/122.mdl 
+# Started at Thu Jul 30 10:49:21 KST 2020
+#
+nnet3-average exp/nnet3/tdnn_lstm1c_sp/122.1.raw - 
+nnet3-am-copy --set-raw-nnet=- exp/nnet3/tdnn_lstm1c_sp/121.mdl exp/nnet3/tdnn_lstm1c_sp/122.mdl 
+WARNING (nnet3-average[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-am-copy[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-average[5.5.0-]:main():nnet3-average.cc:164) Averaged parameters of 1 neural nets, and wrote to -
+WARNING (nnet3-am-copy[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-am-copy[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-am-copy[5.5.0-]:main():nnet3-am-copy.cc:160) Copied neural net from exp/nnet3/tdnn_lstm1c_sp/121.mdl to exp/nnet3/tdnn_lstm1c_sp/122.mdl
+# Accounting: time=0 threads=1
+# Ended (code 0) at Thu Jul 30 10:49:21 KST 2020, elapsed time 0 seconds

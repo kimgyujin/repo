@@ -1,0 +1,76 @@
+# nnet3-train --use-gpu=yes --read-cache=exp/nnet3/tdnn_lstm1c_sp/cache.280 --verbose=1 --print-interval=10 --momentum=0.5 --max-param-change=2.0 --backstitch-training-scale=0.0 --l2-regularize-factor=0.5 --backstitch-training-interval=1 --srand=280 --optimization.min-deriv-time=-20 --optimization.max-deriv-time-relative=30 "nnet3-copy --learning-rate=0.000218844038955 --scale=1.0 exp/nnet3/tdnn_lstm1c_sp/280.mdl - |nnet3-copy --edits='set-dropout-proportion name=* proportion=0.238016528926' - - |" "ark,bg:nnet3-copy-egs               ark:exp/nnet3/tdnn_lstm1c_sp/egs/egs.78.ark ark:- |             nnet3-shuffle-egs --buffer-size=5000             --srand=280 ark:- ark:- |              nnet3-merge-egs --minibatch-size=128,64 ark:- ark:- |" exp/nnet3/tdnn_lstm1c_sp/281.2.raw 
+# Started at Thu Jul 30 11:51:50 KST 2020
+#
+nnet3-train --use-gpu=yes --read-cache=exp/nnet3/tdnn_lstm1c_sp/cache.280 --verbose=1 --print-interval=10 --momentum=0.5 --max-param-change=2.0 --backstitch-training-scale=0.0 --l2-regularize-factor=0.5 --backstitch-training-interval=1 --srand=280 --optimization.min-deriv-time=-20 --optimization.max-deriv-time-relative=30 "nnet3-copy --learning-rate=0.000218844038955 --scale=1.0 exp/nnet3/tdnn_lstm1c_sp/280.mdl - |nnet3-copy --edits='set-dropout-proportion name=* proportion=0.238016528926' - - |" 'ark,bg:nnet3-copy-egs               ark:exp/nnet3/tdnn_lstm1c_sp/egs/egs.78.ark ark:- |             nnet3-shuffle-egs --buffer-size=5000             --srand=280 ark:- ark:- |              nnet3-merge-egs --minibatch-size=128,64 ark:- ark:- |' exp/nnet3/tdnn_lstm1c_sp/281.2.raw 
+LOG (nnet3-train[5.5.0-]:SelectGpuId():cu-device.cc:223) CUDA setup operating under Compute Exclusive Mode.
+LOG (nnet3-train[5.5.0-]:FinalizeActiveGpu():cu-device.cc:308) The active GPU is [0]: TITAN Xp	free:11808M, used:386M, total:12194M, free/total:0.968337 version 6.1
+nnet3-copy --learning-rate=0.000218844038955 --scale=1.0 exp/nnet3/tdnn_lstm1c_sp/280.mdl - 
+nnet3-copy '--edits=set-dropout-proportion name=* proportion=0.238016528926' - - 
+WARNING (nnet3-copy[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-copy[5.5.0-]:main():nnet3-copy.cc:114) Copied raw neural net from exp/nnet3/tdnn_lstm1c_sp/280.mdl to -
+WARNING (nnet3-copy[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-copy[5.5.0-]:ReadEditConfig():nnet-utils.cc:1397) Set dropout proportions for 3 components.
+LOG (nnet3-copy[5.5.0-]:main():nnet3-copy.cc:114) Copied raw neural net from - to -
+WARNING (nnet3-train[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-train[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-train[5.5.0-]:NnetTrainer():nnet-training.cc:48) Read computation cache from exp/nnet3/tdnn_lstm1c_sp/cache.280
+nnet3-merge-egs --minibatch-size=128,64 ark:- ark:- 
+nnet3-copy-egs ark:exp/nnet3/tdnn_lstm1c_sp/egs/egs.78.ark ark:- 
+nnet3-shuffle-egs --buffer-size=5000 --srand=280 ark:- ark:- 
+WARNING (nnet3-train[5.5.0-]:ReorthogonalizeRt1():natural-gradient-online.cc:241) Cholesky out of expected range, reorthogonalizing with Gram-Schmidt
+WARNING (nnet3-train[5.5.0-]:ReorthogonalizeRt1():natural-gradient-online.cc:241) Cholesky out of expected range, reorthogonalizing with Gram-Schmidt
+WARNING (nnet3-train[5.5.0-]:ReorthogonalizeRt1():natural-gradient-online.cc:241) Cholesky out of expected range, reorthogonalizing with Gram-Schmidt
+WARNING (nnet3-train[5.5.0-]:ReorthogonalizeRt1():natural-gradient-online.cc:241) Cholesky out of expected range, reorthogonalizing with Gram-Schmidt
+VLOG[1] (nnet3-train[5.5.0-]:ConsolidateMemory():nnet-utils.cc:1152) Consolidating memory; will print memory usage before and after consolidating:
+LOG (nnet3-train[5.5.0-]:PrintMemoryUsage():cu-allocator.cc:368) Memory usage: 82464512/6191841280 bytes currently allocated/total-held; 1537/10 blocks currently allocated/free; largest free/allocated block sizes are 5857280/6058848512; time taken total/cudaMalloc is 0.00874686/0.00571513, synchronized the GPU 0 times out of 797 frees; device memory info: free:5902M, used:6292M, total:12194M, free/total:0.48403maximum allocated: 1337557248current allocated: 82464512
+LOG (nnet3-train[5.5.0-]:PrintMemoryUsage():cu-allocator.cc:368) Memory usage: 82464512/6191841280 bytes currently allocated/total-held; 1537/12 blocks currently allocated/free; largest free/allocated block sizes are 5857280/6058848512; time taken total/cudaMalloc is 0.00876641/0.00571513, synchronized the GPU 0 times out of 807 frees; device memory info: free:5902M, used:6292M, total:12194M, free/total:0.48403maximum allocated: 1337557248current allocated: 82464512
+VLOG[1] (nnet3-train[5.5.0-]:ConsolidateMemory():nnet-utils.cc:1152) Consolidating memory; will print memory usage before and after consolidating:
+LOG (nnet3-train[5.5.0-]:PrintMemoryUsage():cu-allocator.cc:368) Memory usage: 82464512/6191841280 bytes currently allocated/total-held; 1537/12 blocks currently allocated/free; largest free/allocated block sizes are 5857280/6058848512; time taken total/cudaMalloc is 0.00876641/0.00571513, synchronized the GPU 0 times out of 807 frees; device memory info: free:5902M, used:6292M, total:12194M, free/total:0.48403maximum allocated: 1337557248current allocated: 82464512
+LOG (nnet3-train[5.5.0-]:PrintMemoryUsage():cu-allocator.cc:368) Memory usage: 82458368/6191841280 bytes currently allocated/total-held; 1537/12 blocks currently allocated/free; largest free/allocated block sizes are 5857280/6060650752; time taken total/cudaMalloc is 0.00881672/0.00571513, synchronized the GPU 0 times out of 831 frees; device memory info: free:5902M, used:6292M, total:12194M, free/total:0.48403maximum allocated: 1337557248current allocated: 82458368
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 0-9 is -2.72227 over 50983 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 10-19 is -2.63289 over 50996.5 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 20-29 is -2.5075 over 49678.5 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 30-39 is -2.69568 over 48433 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 40-49 is -2.55447 over 49682.5 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 50-59 is -2.67352 over 48403 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 60-69 is -2.43769 over 47126 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 70-79 is -2.68093 over 49675 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 80-89 is -2.79151 over 50997.5 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 90-99 is -2.57727 over 49693.5 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 100-109 is -2.81423 over 48432 frames.
+LOG (nnet3-copy-egs[5.5.0-]:main():nnet3-copy-egs.cc:431) Read 20414 neural-network training examples, wrote 20414, 0 examples had errors.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 110-119 is -2.51723 over 47086.5 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 120-129 is -2.76436 over 50974.5 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 130-139 is -2.68509 over 48433.5 frames.
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 140-149 is -2.40603 over 48358 frames.
+LOG (nnet3-shuffle-egs[5.5.0-]:main():nnet3-shuffle-egs.cc:103) Shuffled order of 20414 neural-network training examples using a buffer (partial randomization)
+LOG (nnet3-merge-egs[5.5.0-]:PrintSpecificStats():nnet-example-utils.cc:1159) Merged specific eg types as follows [format: <eg-size1>={<mb-size1>-><num-minibatches1>,<mbsize2>-><num-minibatches2>.../d=<num-discarded>},<egs-size2>={...},... (note,egs-size == number of input frames including context).
+LOG (nnet3-merge-egs[5.5.0-]:PrintSpecificStats():nnet-example-utils.cc:1189) 50={64->1,128->2,d=33},60={128->2,d=25},70={64->1,128->6,d=14},90={64->1,128->4,d=6},100={64->1,128->6,d=3},110={64->1,128->136,d=45}
+LOG (nnet3-merge-egs[5.5.0-]:PrintAggregateStats():nnet-example-utils.cc:1155) Processed 20414 egs of avg. size 105.6 into 161 minibatches, discarding 0.6172% of egs.  Avg minibatch size was 126, #distinct types of egs/minibatches was 6/11
+LOG (nnet3-train[5.5.0-]:PrintStatsForThisPhase():nnet-training.cc:278) Average objective function for 'output' for minibatches 150-159 is -2.62126 over 38861 frames.
+LOG (nnet3-train[5.5.0-]:PrintTotalStats():nnet-training.cc:317) Overall average objective function for 'output' is -2.62966 over 779074 frames.
+LOG (nnet3-train[5.5.0-]:PrintTotalStats():nnet-training.cc:324) [this line is to be parsed by a script:] log-prob-per-frame=-2.62966
+LOG (nnet3-train[5.5.0-]:PrintProfile():cu-device.cc:533) -----
+[cudevice profile]
+Heaviside	0.342843s
+Sum	0.348689s
+CuMatrix::Resize	0.351418s
+ComputeLstmNonlinearity	0.383054s
+Scale	0.434099s
+AddMat	0.471942s
+CopyRowsFromVec	0.513863s
+AddRowSumMat	0.550779s
+CuMatrix::SetZero	0.614197s
+AddDiagMatMat	0.682429s
+TraceMatMat	0.890781s
+CopyToVec	1.01603s
+BackpropLstmNonlinearity	1.37179s
+CuMatrixBase::CopyFromMat(from other CuMatrixBase)	2.54663s
+AddMatMat	11.697s
+Total GPU time:	26.7479s (may involve some double-counting)
+-----
+LOG (nnet3-train[5.5.0-]:PrintMemoryUsage():cu-allocator.cc:368) Memory usage: 82464512/6191841280 bytes currently allocated/total-held; 1537/17 blocks currently allocated/free; largest free/allocated block sizes are 5857280/5834031360; time taken total/cudaMalloc is 0.0942171/0.00571513, synchronized the GPU 0 times out of 69559 frees; device memory info: free:5902M, used:6292M, total:12194M, free/total:0.48403maximum allocated: 1337557248current allocated: 82464512
+LOG (nnet3-train[5.5.0-]:main():nnet3-train.cc:91) Wrote model to exp/nnet3/tdnn_lstm1c_sp/281.2.raw
+LOG (nnet3-train[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.0122 seconds taken in nnet3 compilation total (breakdown: 0 compilation, 0 optimization, 0 shortcut expansion, 0 checking, 0 computing indexes, 0.0122 misc.) + 0.389 I/O.
+# Accounting: time=27 threads=1
+# Ended (code 0) at Thu Jul 30 11:52:17 KST 2020, elapsed time 27 seconds

@@ -1,0 +1,144 @@
+# nnet3-latgen-faster-parallel --num-threads=4 --online-ivectors=scp:exp/nnet3/ivectors_dev_clean_2_hires/ivector_online.scp --online-ivector-period=10 --frames-per-chunk=40 --extra-left-context=40 --extra-right-context=0 --extra-left-context-initial=0 --extra-right-context-final=0 --minimize=false --max-active=7000 --min-active=200 --beam=15.0 --lattice-beam=8.0 --acoustic-scale=0.1 --allow-partial=true --word-symbol-table=exp/tri3b/graph_tgsmall/words.txt exp/nnet3/tdnn_lstm1c_sp/final.mdl exp/tri3b/graph_tgsmall/HCLG.fst "ark,s,cs:apply-cmvn --norm-means=false --norm-vars=false --utt2spk=ark:data/dev_clean_2_hires/split38/13/utt2spk scp:data/dev_clean_2_hires/split38/13/cmvn.scp scp:data/dev_clean_2_hires/split38/13/feats.scp ark:- |" "ark:|gzip -c >exp/nnet3/tdnn_lstm1c_sp/decode_tgsmall_dev_clean_2/lat.13.gz" 
+# Started at Thu Jul 30 13:16:42 KST 2020
+#
+nnet3-latgen-faster-parallel --num-threads=4 --online-ivectors=scp:exp/nnet3/ivectors_dev_clean_2_hires/ivector_online.scp --online-ivector-period=10 --frames-per-chunk=40 --extra-left-context=40 --extra-right-context=0 --extra-left-context-initial=0 --extra-right-context-final=0 --minimize=false --max-active=7000 --min-active=200 --beam=15.0 --lattice-beam=8.0 --acoustic-scale=0.1 --allow-partial=true --word-symbol-table=exp/tri3b/graph_tgsmall/words.txt exp/nnet3/tdnn_lstm1c_sp/final.mdl exp/tri3b/graph_tgsmall/HCLG.fst 'ark,s,cs:apply-cmvn --norm-means=false --norm-vars=false --utt2spk=ark:data/dev_clean_2_hires/split38/13/utt2spk scp:data/dev_clean_2_hires/split38/13/cmvn.scp scp:data/dev_clean_2_hires/split38/13/feats.scp ark:- |' 'ark:|gzip -c >exp/nnet3/tdnn_lstm1c_sp/decode_tgsmall_dev_clean_2/lat.13.gz' 
+WARNING (nnet3-latgen-faster-parallel[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 2 orphan nodes.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 3 orphan components.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:Collapse():nnet-utils.cc:1472) Added 1 components, removed 3
+apply-cmvn --norm-means=false --norm-vars=false --utt2spk=ark:data/dev_clean_2_hires/split38/13/utt2spk scp:data/dev_clean_2_hires/split38/13/cmvn.scp scp:data/dev_clean_2_hires/split38/13/feats.scp ark:- 
+2428-83699-0000 I IMAGINE THERE WERE SEVERAL KINDS OF OLD FASHIONED CHRISTMASES BUT COULD HARDLY BE WORSE THAN A CHOP MY CHAMBERS OR HORROR OF HORRORS OF THE CLUB WERE MY COUSIN LUCY'S NOTION OF WHAT SHE CALLS THE FESTIVE SEASON 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0000 is 0.398764 over 1329 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.398 seconds taken in nnet3 compilation total (breakdown: 0.161 compilation, 0.147 optimization, 0 shortcut expansion, 0.00804 checking, 2.81e-05 computing indexes, 0.0816 misc.) + 0 I/O.
+2428-83699-0001 FESTIVE YES 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0001 is 0.357006 over 205 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.314 seconds taken in nnet3 compilation total (breakdown: 0.152 compilation, 0.151 optimization, 0 shortcut expansion, 0.00699 checking, 1.26e-05 computing indexes, 0.00427 misc.) + 0 I/O.
+2428-83699-0002 THE REPLY WAS WRITTEN IN A SPRAWLING FEMININE HAND IT WAS A LITTLE VAGUE 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0002 is 0.367106 over 424 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.423 seconds taken in nnet3 compilation total (breakdown: 0.187 compilation, 0.158 optimization, 0 shortcut expansion, 0.0408 checking, 1.31e-05 computing indexes, 0.0374 misc.) + 0 I/O.
+2428-83699-0003 IT APPEARED THAT THE TERMS WOULD BE FIVE GUINEAS BUT THERE WAS NO MENTION OF THE LENGTH OF TIME WHICH THAT FEE WOULD COVER 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0003 is 0.418678 over 625 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.469 seconds taken in nnet3 compilation total (breakdown: 0.238 compilation, 0.129 optimization, 0 shortcut expansion, 0.0414 checking, 1.69e-05 computing indexes, 0.061 misc.) + 0 I/O.
+2428-83699-0004 THE WHOLE THING WAS A TRIFLE ODD 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0004 is 0.336874 over 186 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.398 seconds taken in nnet3 compilation total (breakdown: 0.153 compilation, 0.131 optimization, 0 shortcut expansion, 0.0808 checking, 1.38e-05 computing indexes, 0.0337 misc.) + 0 I/O.
+2428-83699-0005 THERE WAS NOTHING SAID ABOUT THE SORT OF ACCOMMODATION WHICH WOULD BE PROVIDED NOTHING ABOUT THE KIND OF ESTABLISHMENT WHICH WAS MAINTAINED OR THE TABLE WHICH WAS KEPT 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0005 is 0.430406 over 907 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.449 seconds taken in nnet3 compilation total (breakdown: 0.176 compilation, 0.161 optimization, 0 shortcut expansion, 0.0336 checking, 1.43e-05 computing indexes, 0.0782 misc.) + 0 I/O.
+2428-83699-0006 NOW IT IS REMARKABLE THING THAT I HAVE ALWAYS HAD AN EXTRAORDINARY PREDILECTION FOR THE NAME MADGE I DO NOT KNOW WHY 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0006 is 0.435716 over 681 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.357 seconds taken in nnet3 compilation total (breakdown: 0.177 compilation, 0.145 optimization, 0 shortcut expansion, 0.021 checking, 1.43e-05 computing indexes, 0.013 misc.) + 0 I/O.
+2428-83699-0007 I'VE NEVER KNOWN A MADGE AND YET FOR MY BOYHOOD UPWARD I HAVE DESIRED TO MEET ONE 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0007 is 0.435469 over 569 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.419 seconds taken in nnet3 compilation total (breakdown: 0.153 compilation, 0.195 optimization, 0 shortcut expansion, 0.0645 checking, 1.41e-05 computing indexes, 0.00647 misc.) + 0 I/O.
+2428-83699-0008 AND ARE SUCH CIRCUMSTANCES SHE WAS HARDLY LIKELY TO BE A LIVELY HERSELF THAT HER NAME WAS MADGE AND IT WAS THE ACCIDENT OF HER CHRISTIAN NAME WHICH DECIDED ME TO GO 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0008 is 0.44546 over 1036 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.494 seconds taken in nnet3 compilation total (breakdown: 0.221 compilation, 0.21 optimization, 0 shortcut expansion, 0.0216 checking, 1.5e-05 computing indexes, 0.0407 misc.) + 0 I/O.
+2428-83699-0009 I HAD NO ILLUSIONS 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0009 is 0.371369 over 183 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.373 seconds taken in nnet3 compilation total (breakdown: 0.216 compilation, 0.112 optimization, 0 shortcut expansion, 0.039 checking, 1.5e-05 computing indexes, 0.00612 misc.) + 0 I/O.
+2428-83699-0010 I DID NOT EXPECT A PRINCELY ENTERTAINMENT 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0010 is 0.432536 over 310 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.375 seconds taken in nnet3 compilation total (breakdown: 0.193 compilation, 0.161 optimization, 0 shortcut expansion, 0.0154 checking, 1.22e-05 computing indexes, 0.00581 misc.) + 0 I/O.
+2428-83699-0011 ALL NIGHT IT HAD BEEN BLOWING AND RAINING 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0011 is 0.38548 over 256 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.426 seconds taken in nnet3 compilation total (breakdown: 0.196 compilation, 0.138 optimization, 0 shortcut expansion, 0.0368 checking, 1.12e-05 computing indexes, 0.0558 misc.) + 0 I/O.
+2428-83699-0012 I FELT QUITE LIVELY MYSELF AS A MINGLED WITH THE CHRISTMAS CROWD LOOKING FOR THINGS WHICH MIGHT NOT TURN OUT TO BE ABSOLUTELY PREPOSTEROUS 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0012 is 0.442636 over 811 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.432 seconds taken in nnet3 compilation total (breakdown: 0.212 compilation, 0.122 optimization, 0 shortcut expansion, 0.0858 checking, 1.38e-05 computing indexes, 0.0127 misc.) + 0 I/O.
+2428-83699-0013 I HAVEN'T GOT SOMETHING FOR MADGE I MEAN MISSUS WILSON 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0013 is 0.345931 over 327 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.277 seconds taken in nnet3 compilation total (breakdown: 0.145 compilation, 0.104 optimization, 0 shortcut expansion, 0.00809 checking, 1.19e-05 computing indexes, 0.0192 misc.) + 0 I/O.
+2428-83699-0014 IT WAS A HORRIBLE JOURNEY 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0014 is 0.400239 over 220 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.309 seconds taken in nnet3 compilation total (breakdown: 0.127 compilation, 0.0954 optimization, 0 shortcut expansion, 0.0567 checking, 1.5e-05 computing indexes, 0.0304 misc.) + 0 I/O.
+2428-83699-0015 HE WAS IMPERVIOUS TO REASON 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0015 is 0.478997 over 218 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.284 seconds taken in nnet3 compilation total (breakdown: 0.11 compilation, 0.115 optimization, 0 shortcut expansion, 0.0155 checking, 1.5e-05 computing indexes, 0.0436 misc.) + 0 I/O.
+2428-83699-0016 IT IS SOME SATISFACTION FOR ME TO BE ABLE TO REFLECT THAT I MADE IT WARM FOR THE OFFICIALS HOWEVER COLD I MIGHT HAVE BEEN MYSELF 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0016 is 0.420799 over 850 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.348 seconds taken in nnet3 compilation total (breakdown: 0.133 compilation, 0.176 optimization, 0 shortcut expansion, 0.0333 checking, 1.38e-05 computing indexes, 0.00477 misc.) + 0 I/O.
+2428-83699-0017 WHEN AT LAST I REACHED CROFTON MY JOURNEY'S END IT TURNED OUT THAT THE STATION STAFF CONSISTED OF A HALF WITTED INDIVIDUAL WHO WAS STATIONMASTER PORTER AND CORPS COMBINED AND HULKING LAD WHO DID WHATEVER ELSE THERE WAS TO DO 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0017 is 0.396792 over 1327 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.473 seconds taken in nnet3 compilation total (breakdown: 0.148 compilation, 0.246 optimization, 0 shortcut expansion, 0.0697 checking, 1.5e-05 computing indexes, 0.00867 misc.) + 0 I/O.
+2428-83699-0018 NO ONE HAD COME TO MEET ME THE VILLAGE WAS BOUGHT HALF A MILE AND HANGER DEEMED THAT THE HOUSE FOR WHICH MY STEPS WERE BENT ABOUT FOUR MILES BY THE ROAD HOW FAR IT WAS ACROSS PLOUGHED FIELDS MY INFORMANT DID NOT MENTION 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0018 is 0.417032 over 1433 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.496 seconds taken in nnet3 compilation total (breakdown: 0.222 compilation, 0.187 optimization, 0 shortcut expansion, 0.0693 checking, 1.22e-05 computing indexes, 0.0169 misc.) + 0 I/O.
+2428-83699-0019 THERE WAS A TRAP AT THE BOY IN BLUNDERBUSS BUT THAT REQUIRED FETCHING 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0019 is 0.387012 over 489 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.376 seconds taken in nnet3 compilation total (breakdown: 0.257 compilation, 0.103 optimization, 0 shortcut expansion, 0.0083 checking, 1.5e-05 computing indexes, 0.00648 misc.) + 0 I/O.
+2428-83699-0020 WHEN THE TRAP DID APPEAR IT LOOKED TO ME UNCOMMONLY LIKE AN OPEN SPRING CART 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0020 is 0.403869 over 487 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.272 seconds taken in nnet3 compilation total (breakdown: 0.12 compilation, 0.119 optimization, 0 shortcut expansion, 0.0276 checking, 1.31e-05 computing indexes, 0.00558 misc.) + 0 I/O.
+2428-83699-0021 IN IT I WAS DEPOSITED WITH MY LUGGAGE 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0021 is 0.394549 over 280 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.181 seconds taken in nnet3 compilation total (breakdown: 0.0703 compilation, 0.104 optimization, 0 shortcut expansion, 0.00468 checking, 1e-05 computing indexes, 0.0025 misc.) + 0 I/O.
+2428-83699-0022 I DID NOT KNOW WHAT HE MEANT 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0022 is 0.372139 over 196 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.411 seconds taken in nnet3 compilation total (breakdown: 0.211 compilation, 0.161 optimization, 0 shortcut expansion, 0.0312 checking, 1.38e-05 computing indexes, 0.00775 misc.) + 0 I/O.
+2428-83699-0023 I DID NOT ASK I WAS BEYOND IT 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0023 is 0.415456 over 258 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.392 seconds taken in nnet3 compilation total (breakdown: 0.17 compilation, 0.158 optimization, 0 shortcut expansion, 0.057 checking, 1.38e-05 computing indexes, 0.0064 misc.) + 0 I/O.
+2428-83699-0024 I WAS CHILLED TO THE BONE WET TIRED HUNGRY 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0024 is 0.381122 over 423 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.358 seconds taken in nnet3 compilation total (breakdown: 0.159 compilation, 0.165 optimization, 0 shortcut expansion, 0.0282 checking, 1.31e-05 computing indexes, 0.00568 misc.) + 0 I/O.
+2428-83699-0025 I HAD LONG BEEN WISHING THAT AN OLD FASHIONED CHRISTMAS HAD BEEN COMPLETELY EXTINCT BEFORE HAD THOUGHT OF ADVENTURING IN QUEST OF ONE 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0025 is 0.412716 over 799 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.478 seconds taken in nnet3 compilation total (breakdown: 0.186 compilation, 0.247 optimization, 0 shortcut expansion, 0.01 checking, 1.34e-05 computing indexes, 0.0344 misc.) + 0 I/O.
+2428-83699-0026 HERE WE BE THAT MIGHT BE SO 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0026 is 0.329711 over 312 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.465 seconds taken in nnet3 compilation total (breakdown: 0.237 compilation, 0.21 optimization, 0 shortcut expansion, 0.00966 checking, 1.38e-05 computing indexes, 0.00811 misc.) + 0 I/O.
+2428-83699-0027 THERE BE THE TORN FROM THE VIEW YOU GO UP THREE STEPS IF YOU CAN FIND HIM 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0027 is 0.354964 over 495 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.477 seconds taken in nnet3 compilation total (breakdown: 0.213 compilation, 0.168 optimization, 0 shortcut expansion, 0.0401 checking, 1.19e-05 computing indexes, 0.0559 misc.) + 0 I/O.
+2428-83699-0028 THERE'S A KNOCKER IF NONE OF THEM HEAVEN TWISTED OFF 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0028 is 0.366539 over 398 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.713 seconds taken in nnet3 compilation total (breakdown: 0.32 compilation, 0.301 optimization, 0 shortcut expansion, 0.0284 checking, 1.57e-05 computing indexes, 0.0632 misc.) + 0 I/O.
+2428-83699-0029 THERE APPEARED TO BE NO KNOCKER THE WHETHER IT HAD BEEN TWISTED OFF WAS MORE THAN I COULD SAY 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0029 is 0.409759 over 628 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.357 seconds taken in nnet3 compilation total (breakdown: 0.14 compilation, 0.131 optimization, 0 shortcut expansion, 0.0547 checking, 1.36e-05 computing indexes, 0.0312 misc.) + 0 I/O.
+2428-83699-0030 NO ANSWER THOUGH I ALLOWED A MORE THAN DESE AN INTERVAL 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0030 is 0.318701 over 361 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.294 seconds taken in nnet3 compilation total (breakdown: 0.0998 compilation, 0.156 optimization, 0 shortcut expansion, 0.0332 checking, 1.5e-05 computing indexes, 0.00555 misc.) + 0 I/O.
+2428-83699-0031 BUT A RING AGAIN SUGGESTED THE DRIVER HARD 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0031 is 0.399434 over 329 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.307 seconds taken in nnet3 compilation total (breakdown: 0.11 compilation, 0.161 optimization, 0 shortcut expansion, 0.0316 checking, 1.19e-05 computing indexes, 0.00497 misc.) + 0 I/O.
+2428-83699-0032 MAYBE THEY'RE UP TO SOME OF THEIR GAMES AND WANTS ROUSING 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0032 is 0.379548 over 316 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.364 seconds taken in nnet3 compilation total (breakdown: 0.118 compilation, 0.163 optimization, 0 shortcut expansion, 0.0463 checking, 1.1e-05 computing indexes, 0.0373 misc.) + 0 I/O.
+LOG (apply-cmvn[5.5.0-]:main():apply-cmvn.cc:81) Copied 43 utterances.
+2428-83699-0033 THE BELL REVERBERATED THROUGH WHAT SEEMED LIKE AN EMPTY HOUSE 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0033 is 0.447512 over 390 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.277 seconds taken in nnet3 compilation total (breakdown: 0.087 compilation, 0.127 optimization, 0 shortcut expansion, 0.057 checking, 1.69e-05 computing indexes, 0.00628 misc.) + 0 I/O.
+2428-83699-0034 PRESENTLY FEET WERE HEARD ADVANCING ALONG THE PASSAGE SEVERAL PAIRS OF SEAMED AND LIGHT GLEAMED THROUGH THE WINDOW OVER THE DOOR 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0034 is 0.434277 over 810 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.407 seconds taken in nnet3 compilation total (breakdown: 0.17 compilation, 0.167 optimization, 0 shortcut expansion, 0.0641 checking, 1.62e-05 computing indexes, 0.00589 misc.) + 0 I/O.
+2428-83699-0035 A VOICE INQUIRED WHO'S THERE 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0035 is 0.374882 over 271 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.408 seconds taken in nnet3 compilation total (breakdown: 0.201 compilation, 0.164 optimization, 0 shortcut expansion, 0.0372 checking, 1.41e-05 computing indexes, 0.00677 misc.) + 0 I/O.
+2428-83699-0036 THE INFORMATION WAS GREETED WITH WHAT SOUNDED UNCOMMONLY LIKE A CHORUS OF LAUGHTER 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0036 is 0.411557 over 458 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.277 seconds taken in nnet3 compilation total (breakdown: 0.137 compilation, 0.103 optimization, 0 shortcut expansion, 0.0078 checking, 1.36e-05 computing indexes, 0.0295 misc.) + 0 I/O.
+2428-83699-0037 THERE WAS A RUSH OF RETREATING FEET AND EXPOSTULATING VOICE THEN DARKNESS AGAIN AND SILENCE 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0037 is 0.380155 over 638 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.413 seconds taken in nnet3 compilation total (breakdown: 0.172 compilation, 0.139 optimization, 0 shortcut expansion, 0.0574 checking, 1.19e-05 computing indexes, 0.045 misc.) + 0 I/O.
+2428-83699-0038 WHO LIVES HERE ARE THE PEOPLE MAD 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0038 is 0.408457 over 265 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.449 seconds taken in nnet3 compilation total (breakdown: 0.187 compilation, 0.199 optimization, 0 shortcut expansion, 0.0288 checking, 1.29e-05 computing indexes, 0.0338 misc.) + 0 I/O.
+2428-83699-0039 I TOLD THE BELL AGAIN 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0039 is 0.416418 over 196 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.405 seconds taken in nnet3 compilation total (breakdown: 0.194 compilation, 0.196 optimization, 0 shortcut expansion, 0.00869 checking, 1.5e-05 computing indexes, 0.00604 misc.) + 0 I/O.
+2428-83699-0040 AFTER A VAST AMOUNT OF AN FASTENING THE DOOR WAS OPENED AND ON THE THRESHOLD THERE STOOD A GIRL WITH A LIGHTED CANDLE IN HER HAND 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0040 is 0.425394 over 781 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.494 seconds taken in nnet3 compilation total (breakdown: 0.228 compilation, 0.172 optimization, 0 shortcut expansion, 0.00854 checking, 1.12e-05 computing indexes, 0.0851 misc.) + 0 I/O.
+2428-83699-0041 I MISTER CHRISTOPHER FROM LONDON 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0041 is 0.380161 over 205 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.373 seconds taken in nnet3 compilation total (breakdown: 0.174 compilation, 0.166 optimization, 0 shortcut expansion, 0.0287 checking, 1.41e-05 computing indexes, 0.00457 misc.) + 0 I/O.
+2428-83699-0042 WE LOST THE KEY OF THE CELLAR AND THERE'S NOTHING OUT EXCEPT WATER AND I DON'T THINK YOU CARE FOR THAT 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 2428-83699-0042 is 0.410052 over 641 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.275 seconds taken in nnet3 compilation total (breakdown: 0.0965 compilation, 0.167 optimization, 0 shortcut expansion, 0.00706 checking, 1.1e-05 computing indexes, 0.00373 misc.) + 0 I/O.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:main():nnet3-latgen-faster-parallel.cc:264) Time taken 153.139s: real-time factor assuming 100 feature frames/sec is 2.74405
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:main():nnet3-latgen-faster-parallel.cc:268) Done 43 utterances, failed for 0
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:main():nnet3-latgen-faster-parallel.cc:270) Overall log-likelihood per frame is 0.406044 over 22323 frames.
+# Accounting: time=155 threads=1
+# Ended (code 0) at Thu Jul 30 13:19:17 KST 2020, elapsed time 155 seconds

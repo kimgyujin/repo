@@ -1,0 +1,338 @@
+# nnet3-combine --use-gpu=yes --max-objective-evaluations=30 --verbose=3 exp/nnet3/tdnn_lstm1c_sp/484.mdl exp/nnet3/tdnn_lstm1c_sp/483.mdl exp/nnet3/tdnn_lstm1c_sp/482.mdl exp/nnet3/tdnn_lstm1c_sp/481.mdl exp/nnet3/tdnn_lstm1c_sp/480.mdl exp/nnet3/tdnn_lstm1c_sp/479.mdl exp/nnet3/tdnn_lstm1c_sp/478.mdl exp/nnet3/tdnn_lstm1c_sp/477.mdl exp/nnet3/tdnn_lstm1c_sp/476.mdl exp/nnet3/tdnn_lstm1c_sp/475.mdl exp/nnet3/tdnn_lstm1c_sp/474.mdl exp/nnet3/tdnn_lstm1c_sp/473.mdl exp/nnet3/tdnn_lstm1c_sp/472.mdl exp/nnet3/tdnn_lstm1c_sp/471.mdl exp/nnet3/tdnn_lstm1c_sp/470.mdl exp/nnet3/tdnn_lstm1c_sp/469.mdl exp/nnet3/tdnn_lstm1c_sp/468.mdl exp/nnet3/tdnn_lstm1c_sp/467.mdl exp/nnet3/tdnn_lstm1c_sp/466.mdl exp/nnet3/tdnn_lstm1c_sp/465.mdl exp/nnet3/tdnn_lstm1c_sp/464.mdl exp/nnet3/tdnn_lstm1c_sp/463.mdl exp/nnet3/tdnn_lstm1c_sp/462.mdl exp/nnet3/tdnn_lstm1c_sp/461.mdl exp/nnet3/tdnn_lstm1c_sp/460.mdl exp/nnet3/tdnn_lstm1c_sp/459.mdl exp/nnet3/tdnn_lstm1c_sp/458.mdl exp/nnet3/tdnn_lstm1c_sp/457.mdl exp/nnet3/tdnn_lstm1c_sp/456.mdl exp/nnet3/tdnn_lstm1c_sp/455.mdl exp/nnet3/tdnn_lstm1c_sp/454.mdl "ark,bg:nnet3-copy-egs                      ark:exp/nnet3/tdnn_lstm1c_sp/egs/combine.egs ark:- |                       nnet3-merge-egs --minibatch-size=1:128,64 ark:- ark:- |" "| nnet3-am-copy --set-raw-nnet=- exp/nnet3/tdnn_lstm1c_sp/484.mdl exp/nnet3/tdnn_lstm1c_sp/combined.mdl" 
+# Started at Thu Jul 30 13:13:09 KST 2020
+#
+nnet3-combine --use-gpu=yes --max-objective-evaluations=30 --verbose=3 exp/nnet3/tdnn_lstm1c_sp/484.mdl exp/nnet3/tdnn_lstm1c_sp/483.mdl exp/nnet3/tdnn_lstm1c_sp/482.mdl exp/nnet3/tdnn_lstm1c_sp/481.mdl exp/nnet3/tdnn_lstm1c_sp/480.mdl exp/nnet3/tdnn_lstm1c_sp/479.mdl exp/nnet3/tdnn_lstm1c_sp/478.mdl exp/nnet3/tdnn_lstm1c_sp/477.mdl exp/nnet3/tdnn_lstm1c_sp/476.mdl exp/nnet3/tdnn_lstm1c_sp/475.mdl exp/nnet3/tdnn_lstm1c_sp/474.mdl exp/nnet3/tdnn_lstm1c_sp/473.mdl exp/nnet3/tdnn_lstm1c_sp/472.mdl exp/nnet3/tdnn_lstm1c_sp/471.mdl exp/nnet3/tdnn_lstm1c_sp/470.mdl exp/nnet3/tdnn_lstm1c_sp/469.mdl exp/nnet3/tdnn_lstm1c_sp/468.mdl exp/nnet3/tdnn_lstm1c_sp/467.mdl exp/nnet3/tdnn_lstm1c_sp/466.mdl exp/nnet3/tdnn_lstm1c_sp/465.mdl exp/nnet3/tdnn_lstm1c_sp/464.mdl exp/nnet3/tdnn_lstm1c_sp/463.mdl exp/nnet3/tdnn_lstm1c_sp/462.mdl exp/nnet3/tdnn_lstm1c_sp/461.mdl exp/nnet3/tdnn_lstm1c_sp/460.mdl exp/nnet3/tdnn_lstm1c_sp/459.mdl exp/nnet3/tdnn_lstm1c_sp/458.mdl exp/nnet3/tdnn_lstm1c_sp/457.mdl exp/nnet3/tdnn_lstm1c_sp/456.mdl exp/nnet3/tdnn_lstm1c_sp/455.mdl exp/nnet3/tdnn_lstm1c_sp/454.mdl 'ark,bg:nnet3-copy-egs                      ark:exp/nnet3/tdnn_lstm1c_sp/egs/combine.egs ark:- |                       nnet3-merge-egs --minibatch-size=1:128,64 ark:- ark:- |' '| nnet3-am-copy --set-raw-nnet=- exp/nnet3/tdnn_lstm1c_sp/484.mdl exp/nnet3/tdnn_lstm1c_sp/combined.mdl' 
+LOG (nnet3-combine[5.5.0-]:SelectGpuId():cu-device.cc:223) CUDA setup operating under Compute Exclusive Mode.
+LOG (nnet3-combine[5.5.0-]:FinalizeActiveGpu():cu-device.cc:308) The active GPU is [0]: TITAN Xp	free:11808M, used:386M, total:12194M, free/total:0.968337 version 6.1
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+nnet3-copy-egs ark:exp/nnet3/tdnn_lstm1c_sp/egs/combine.egs ark:- 
+nnet3-merge-egs --minibatch-size=1:128,64 ark:- ark:- 
+LOG (nnet3-copy-egs[5.5.0-]:main():nnet3-copy-egs.cc:431) Read 1500 neural-network training examples, wrote 1500, 0 examples had errors.
+LOG (nnet3-merge-egs[5.5.0-]:PrintSpecificStats():nnet-example-utils.cc:1159) Merged specific eg types as follows [format: <eg-size1>={<mb-size1>-><num-minibatches1>,<mbsize2>-><num-minibatches2>.../d=<num-discarded>},<egs-size2>={...},... (note,egs-size == number of input frames including context).
+LOG (nnet3-merge-egs[5.5.0-]:PrintSpecificStats():nnet-example-utils.cc:1189) 50={27->1,d=0},60={26->1,d=0},70={64->1,d=0},90={38->1,d=0},100={65->1,d=0},110={128->10,d=0}
+LOG (nnet3-merge-egs[5.5.0-]:PrintAggregateStats():nnet-example-utils.cc:1155) Processed 1500 egs of avg. size 105.4 into 15 minibatches, discarding 0% of egs.  Avg minibatch size was 100, #distinct types of egs/minibatches was 6/6
+LOG (nnet3-combine[5.5.0-]:main():nnet3-combine.cc:148) Read 15 examples.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 38518208
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 2227768
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 18564928
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1106280
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 33972288
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1979744
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 29426368
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1731720
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 23110848
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1354304
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 14019008
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 976888
+LOG (nnet3-combine[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.368 seconds taken in nnet3 compilation total (breakdown: 0.18 compilation, 0.143 optimization, 0.0117 shortcut expansion, 0.0114 checking, 0.00143 computing indexes, 0.0199 misc.) + 0 I/O.
+LOG (nnet3-combine[5.5.0-]:main():nnet3-combine.cc:158) objective function using the last model is -0.938986
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 38518208
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 2227768
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 18564928
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1106280
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 33972288
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1979744
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 29426368
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1731720
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 23110848
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1354304
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 14019008
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 976888
+LOG (nnet3-combine[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.36 seconds taken in nnet3 compilation total (breakdown: 0.177 compilation, 0.14 optimization, 0.011 shortcut expansion, 0.0111 checking, 0.00125 computing indexes, 0.0193 misc.) + 0 I/O.
+LOG (nnet3-combine[5.5.0-]:main():nnet3-combine.cc:174) Combining last 3 models, objective function is -0.8913
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 38518208
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 2227768
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 18564928
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1106280
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 33972288
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1979744
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 29426368
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1731720
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 23110848
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1354304
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 14019008
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 976888
+LOG (nnet3-combine[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.362 seconds taken in nnet3 compilation total (breakdown: 0.178 compilation, 0.14 optimization, 0.0109 shortcut expansion, 0.0113 checking, 0.00127 computing indexes, 0.0198 misc.) + 0 I/O.
+LOG (nnet3-combine[5.5.0-]:main():nnet3-combine.cc:174) Combining last 5 models, objective function is -0.882935
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 38518208
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 2227768
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 18564928
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1106280
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 33972288
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1979744
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 29426368
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1731720
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 23110848
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1354304
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 14019008
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 976888
+LOG (nnet3-combine[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.366 seconds taken in nnet3 compilation total (breakdown: 0.18 compilation, 0.141 optimization, 0.0117 shortcut expansion, 0.0117 checking, 0.00127 computing indexes, 0.0201 misc.) + 0 I/O.
+LOG (nnet3-combine[5.5.0-]:main():nnet3-combine.cc:174) Combining last 7 models, objective function is -0.877011
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 38518208
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 2227768
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 18564928
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1106280
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 33972288
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1979744
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 29426368
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1731720
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 23110848
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1354304
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 14019008
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 976888
+LOG (nnet3-combine[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.371 seconds taken in nnet3 compilation total (breakdown: 0.182 compilation, 0.143 optimization, 0.0119 shortcut expansion, 0.0117 checking, 0.0014 computing indexes, 0.021 misc.) + 0 I/O.
+LOG (nnet3-combine[5.5.0-]:main():nnet3-combine.cc:174) Combining last 9 models, objective function is -0.875758
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 38518208
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 2227768
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 18564928
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1106280
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 33972288
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1979744
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 29426368
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1731720
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 23110848
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1354304
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 14019008
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 976888
+LOG (nnet3-combine[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.365 seconds taken in nnet3 compilation total (breakdown: 0.181 compilation, 0.141 optimization, 0.011 shortcut expansion, 0.0114 checking, 0.00126 computing indexes, 0.0201 misc.) + 0 I/O.
+LOG (nnet3-combine[5.5.0-]:main():nnet3-combine.cc:174) Combining last 11 models, objective function is -0.875522
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 38518208
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 2227768
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 18564928
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1106280
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 33972288
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1979744
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 29426368
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1731720
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 23110848
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1354304
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 14019008
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 976888
+LOG (nnet3-combine[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.364 seconds taken in nnet3 compilation total (breakdown: 0.18 compilation, 0.141 optimization, 0.0112 shortcut expansion, 0.0113 checking, 0.00126 computing indexes, 0.0194 misc.) + 0 I/O.
+LOG (nnet3-combine[5.5.0-]:main():nnet3-combine.cc:174) Combining last 13 models, objective function is -0.875302
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 38518208
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 2227768
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 18564928
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1106280
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 33972288
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1979744
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 29426368
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1731720
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 23110848
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1354304
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 14019008
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 976888
+LOG (nnet3-combine[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.372 seconds taken in nnet3 compilation total (breakdown: 0.182 compilation, 0.143 optimization, 0.0123 shortcut expansion, 0.0117 checking, 0.00133 computing indexes, 0.0209 misc.) + 0 I/O.
+LOG (nnet3-combine[5.5.0-]:main():nnet3-combine.cc:174) Combining last 15 models, objective function is -0.875731
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 38518208
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 2227768
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 18564928
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1106280
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 33972288
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1979744
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 29426368
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1731720
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 23110848
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1354304
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 14019008
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 976888
+LOG (nnet3-combine[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.364 seconds taken in nnet3 compilation total (breakdown: 0.179 compilation, 0.141 optimization, 0.0112 shortcut expansion, 0.0114 checking, 0.0013 computing indexes, 0.0206 misc.) + 0 I/O.
+LOG (nnet3-combine[5.5.0-]:main():nnet3-combine.cc:174) Combining last 17 models, objective function is -0.876365
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 38518208
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 2227768
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 18564928
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1106280
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 33972288
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1979744
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 29426368
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1731720
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 23110848
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1354304
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 14019008
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 976888
+LOG (nnet3-combine[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.367 seconds taken in nnet3 compilation total (breakdown: 0.182 compilation, 0.141 optimization, 0.011 shortcut expansion, 0.0116 checking, 0.00128 computing indexes, 0.02 misc.) + 0 I/O.
+LOG (nnet3-combine[5.5.0-]:main():nnet3-combine.cc:174) Combining last 19 models, objective function is -0.875917
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 38518208
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 2227768
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 18564928
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1106280
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 33972288
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1979744
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 29426368
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1731720
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 23110848
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1354304
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 14019008
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 976888
+LOG (nnet3-combine[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.368 seconds taken in nnet3 compilation total (breakdown: 0.181 compilation, 0.143 optimization, 0.0116 shortcut expansion, 0.0112 checking, 0.00141 computing indexes, 0.0203 misc.) + 0 I/O.
+LOG (nnet3-combine[5.5.0-]:main():nnet3-combine.cc:174) Combining last 21 models, objective function is -0.876313
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 38518208
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 2227768
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 18564928
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1106280
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 33972288
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1979744
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 29426368
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1731720
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 23110848
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1354304
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 14019008
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 976888
+LOG (nnet3-combine[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.364 seconds taken in nnet3 compilation total (breakdown: 0.179 compilation, 0.141 optimization, 0.0111 shortcut expansion, 0.0114 checking, 0.00129 computing indexes, 0.0206 misc.) + 0 I/O.
+LOG (nnet3-combine[5.5.0-]:main():nnet3-combine.cc:174) Combining last 23 models, objective function is -0.876219
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 38518208
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 2227768
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 18564928
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1106280
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 33972288
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1979744
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 29426368
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1731720
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 23110848
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1354304
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 14019008
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 976888
+LOG (nnet3-combine[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.366 seconds taken in nnet3 compilation total (breakdown: 0.181 compilation, 0.141 optimization, 0.0111 shortcut expansion, 0.0116 checking, 0.00131 computing indexes, 0.0201 misc.) + 0 I/O.
+LOG (nnet3-combine[5.5.0-]:main():nnet3-combine.cc:174) Combining last 25 models, objective function is -0.877382
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 38518208
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 2227768
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 18564928
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1106280
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 33972288
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1979744
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 29426368
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1731720
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 23110848
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1354304
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 14019008
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 976888
+LOG (nnet3-combine[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.367 seconds taken in nnet3 compilation total (breakdown: 0.18 compilation, 0.141 optimization, 0.0116 shortcut expansion, 0.0114 checking, 0.00133 computing indexes, 0.021 misc.) + 0 I/O.
+LOG (nnet3-combine[5.5.0-]:main():nnet3-combine.cc:174) Combining last 27 models, objective function is -0.877615
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 38518208
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 2227768
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 18564928
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1106280
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 33972288
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1979744
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 29426368
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1731720
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 23110848
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1354304
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 14019008
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 976888
+LOG (nnet3-combine[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.365 seconds taken in nnet3 compilation total (breakdown: 0.179 compilation, 0.141 optimization, 0.0111 shortcut expansion, 0.0114 checking, 0.00134 computing indexes, 0.0206 misc.) + 0 I/O.
+LOG (nnet3-combine[5.5.0-]:main():nnet3-combine.cc:174) Combining last 29 models, objective function is -0.878444
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-combine[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 38518208
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 2227768
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 18564928
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1106280
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 33972288
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1979744
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 29426368
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1731720
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 23110848
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1354304
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 14019008
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 976888
+LOG (nnet3-combine[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.364 seconds taken in nnet3 compilation total (breakdown: 0.179 compilation, 0.141 optimization, 0.0111 shortcut expansion, 0.0113 checking, 0.00129 computing indexes, 0.0202 misc.) + 0 I/O.
+LOG (nnet3-combine[5.5.0-]:main():nnet3-combine.cc:174) Combining last 31 models, objective function is -0.879335
+LOG (nnet3-combine[5.5.0-]:main():nnet3-combine.cc:183) Combining 13 nnets, objective function changed from -0.938986 to -0.875302
+LOG (nnet3-combine[5.5.0-]:RecomputeStats():nnet-utils.cc:551) Recomputing stats on nnet (affects batch-norm)
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 38518208
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 2227768
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 18564928
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1106280
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 33972288
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1979744
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 29426368
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1731720
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 23110848
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 1354304
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:507) Before optimization, max memory use (bytes) = 14019008
+LOG (nnet3-combine[5.5.0-]:Optimize():nnet-optimize.cc:629) After optimization, max memory use (bytes) = 976888
+LOG (nnet3-combine[5.5.0-]:PrintTotalStats():nnet-diagnostics.cc:162) Overall log-likelihood for 'output' is -0.884147 per frame, over 57503 frames.
+LOG (nnet3-combine[5.5.0-]:PrintTotalStats():nnet-diagnostics.cc:180) Overall accuracy for 'output' is 0.748665 per frame, over 57503 frames.
+LOG (nnet3-combine[5.5.0-]:RecomputeStats():nnet-utils.cc:559) Done recomputing stats.
+LOG (nnet3-combine[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.369 seconds taken in nnet3 compilation total (breakdown: 0.183 compilation, 0.141 optimization, 0.0115 shortcut expansion, 0.0114 checking, 0.00131 computing indexes, 0.0212 misc.) + 0 I/O.
+LOG (nnet3-combine[5.5.0-]:PrintProfile():cu-device.cc:533) -----
+[cudevice profile]
+CuVector::CopyFromVecH2D	0.0973883s
+CuArray::Resize	0.10677s
+CuArray::SetZero	0.112942s
+AddDiagMatMat	0.134368s
+Floor	0.14415s
+MulColsVec	0.161951s
+AddVecToRows	0.162157s
+CopyRows	0.197954s
+Scale	0.202849s
+AddRowSumMat	0.21982s
+CuMatrixBase::CopyFromMat(from CPU)	0.451732s
+ComputeLstmNonlinearity	0.480733s
+CopyRowsFromVec	0.649702s
+CuMatrixBase::CopyFromMat(from other CuMatrixBase)	1.26644s
+AddMatMat	5.10953s
+Total GPU time:	10.0827s (may involve some double-counting)
+-----
+LOG (nnet3-combine[5.5.0-]:PrintMemoryUsage():cu-allocator.cc:368) Memory usage: 110882048/6191841280 bytes currently allocated/total-held; 222/5 blocks currently allocated/free; largest free/allocated block sizes are 5857280/6080807680; time taken total/cudaMalloc is 0.0353951/0.00554204, synchronized the GPU 0 times out of 20485 frees; device memory info: free:5902M, used:6292M, total:12194M, free/total:0.48403maximum allocated: 304306432current allocated: 110882048
+nnet3-am-copy --set-raw-nnet=- exp/nnet3/tdnn_lstm1c_sp/484.mdl exp/nnet3/tdnn_lstm1c_sp/combined.mdl 
+WARNING (nnet3-am-copy[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-am-copy[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-am-copy[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-am-copy[5.5.0-]:main():nnet3-am-copy.cc:160) Copied neural net from exp/nnet3/tdnn_lstm1c_sp/484.mdl to exp/nnet3/tdnn_lstm1c_sp/combined.mdl
+LOG (nnet3-combine[5.5.0-]:main():nnet3-combine.cc:195) Finished combining neural nets, wrote model to | nnet3-am-copy --set-raw-nnet=- exp/nnet3/tdnn_lstm1c_sp/484.mdl exp/nnet3/tdnn_lstm1c_sp/combined.mdl
+# Accounting: time=19 threads=1
+# Ended (code 0) at Thu Jul 30 13:13:28 KST 2020, elapsed time 19 seconds

@@ -1,0 +1,7 @@
+# nnet3-init --srand=-2 exp/nnet3/tdnn_lstm1c_sp/configs/init.config exp/nnet3/tdnn_lstm1c_sp/init.raw 
+# Started at Thu Jul 30 09:59:17 KST 2020
+#
+nnet3-init --srand=-2 exp/nnet3/tdnn_lstm1c_sp/configs/init.config exp/nnet3/tdnn_lstm1c_sp/init.raw 
+LOG (nnet3-init[5.5.0-]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3/tdnn_lstm1c_sp/init.raw
+# Accounting: time=0 threads=1
+# Ended (code 0) at Thu Jul 30 09:59:17 KST 2020, elapsed time 0 seconds

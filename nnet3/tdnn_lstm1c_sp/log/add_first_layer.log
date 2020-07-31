@@ -1,0 +1,9 @@
+# nnet3-init --srand=-3 exp/nnet3/tdnn_lstm1c_sp/init.raw exp/nnet3/tdnn_lstm1c_sp/configs/final.config exp/nnet3/tdnn_lstm1c_sp/0.raw 
+# Started at Thu Jul 30 10:01:06 KST 2020
+#
+nnet3-init --srand=-3 exp/nnet3/tdnn_lstm1c_sp/init.raw exp/nnet3/tdnn_lstm1c_sp/configs/final.config exp/nnet3/tdnn_lstm1c_sp/0.raw 
+LOG (nnet3-init[5.5.0-]:main():nnet3-init.cc:68) Read raw neural net from exp/nnet3/tdnn_lstm1c_sp/init.raw
+WARNING (nnet3-init[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-init[5.5.0-]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3/tdnn_lstm1c_sp/0.raw
+# Accounting: time=0 threads=1
+# Ended (code 0) at Thu Jul 30 10:01:06 KST 2020, elapsed time 0 seconds

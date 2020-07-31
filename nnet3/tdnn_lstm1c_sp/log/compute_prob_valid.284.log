@@ -1,0 +1,19 @@
+# nnet3-compute-prob exp/nnet3/tdnn_lstm1c_sp/284.mdl "ark,bg:nnet3-copy-egs                      ark:exp/nnet3/tdnn_lstm1c_sp/egs/valid_diagnostic.egs ark:- |                     nnet3-merge-egs --minibatch-size=1:64 ark:-                     ark:- |" 
+# Started at Thu Jul 30 11:53:29 KST 2020
+#
+nnet3-compute-prob exp/nnet3/tdnn_lstm1c_sp/284.mdl 'ark,bg:nnet3-copy-egs                      ark:exp/nnet3/tdnn_lstm1c_sp/egs/valid_diagnostic.egs ark:- |                     nnet3-merge-egs --minibatch-size=1:64 ark:-                     ark:- |' 
+WARNING (nnet3-compute-prob[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-compute-prob[5.5.0-]:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 2 orphan nodes.
+LOG (nnet3-compute-prob[5.5.0-]:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 3 orphan components.
+LOG (nnet3-compute-prob[5.5.0-]:Collapse():nnet-utils.cc:1472) Added 1 components, removed 3
+nnet3-merge-egs --minibatch-size=1:64 ark:- ark:- 
+nnet3-copy-egs ark:exp/nnet3/tdnn_lstm1c_sp/egs/valid_diagnostic.egs ark:- 
+LOG (nnet3-copy-egs[5.5.0-]:main():nnet3-copy-egs.cc:431) Read 250 neural-network training examples, wrote 250, 0 examples had errors.
+LOG (nnet3-merge-egs[5.5.0-]:PrintSpecificStats():nnet-example-utils.cc:1159) Merged specific eg types as follows [format: <eg-size1>={<mb-size1>-><num-minibatches1>,<mbsize2>-><num-minibatches2>.../d=<num-discarded>},<egs-size2>={...},... (note,egs-size == number of input frames including context).
+LOG (nnet3-merge-egs[5.5.0-]:PrintSpecificStats():nnet-example-utils.cc:1189) 50={4->1,d=0},60={2->1,d=0},70={12->1,d=0},90={6->1,d=0},100={8->1,d=0},110={26->1,64->3,d=0}
+LOG (nnet3-merge-egs[5.5.0-]:PrintAggregateStats():nnet-example-utils.cc:1155) Processed 250 egs of avg. size 105.9 into 9 minibatches, discarding 0% of egs.  Avg minibatch size was 27.78, #distinct types of egs/minibatches was 6/7
+LOG (nnet3-compute-prob[5.5.0-]:PrintTotalStats():nnet-diagnostics.cc:162) Overall log-likelihood for 'output' is -1.29412 per frame, over 9658 frames.
+LOG (nnet3-compute-prob[5.5.0-]:PrintTotalStats():nnet-diagnostics.cc:180) Overall accuracy for 'output' is 0.637037 per frame, over 9658 frames.
+LOG (nnet3-compute-prob[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.198 seconds taken in nnet3 compilation total (breakdown: 0.113 compilation, 0.0621 optimization, 0.00344 shortcut expansion, 0.0114 checking, 9.18e-05 computing indexes, 0.00843 misc.) + 0 I/O.
+# Accounting: time=5 threads=1
+# Ended (code 0) at Thu Jul 30 11:53:34 KST 2020, elapsed time 5 seconds

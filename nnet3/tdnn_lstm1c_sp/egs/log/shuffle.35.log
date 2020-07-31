@@ -1,0 +1,7 @@
+# nnet3-shuffle-egs --srand=$[35+0] "ark:cat  exp/nnet3/tdnn_lstm1c_sp/egs/egs_orig.1.35.ark exp/nnet3/tdnn_lstm1c_sp/egs/egs_orig.2.35.ark exp/nnet3/tdnn_lstm1c_sp/egs/egs_orig.3.35.ark exp/nnet3/tdnn_lstm1c_sp/egs/egs_orig.4.35.ark exp/nnet3/tdnn_lstm1c_sp/egs/egs_orig.5.35.ark exp/nnet3/tdnn_lstm1c_sp/egs/egs_orig.6.35.ark|" ark:exp/nnet3/tdnn_lstm1c_sp/egs/egs.35.ark 
+# Started at Thu Jul 30 10:00:28 KST 2020
+#
+nnet3-shuffle-egs --srand=35 'ark:cat  exp/nnet3/tdnn_lstm1c_sp/egs/egs_orig.1.35.ark exp/nnet3/tdnn_lstm1c_sp/egs/egs_orig.2.35.ark exp/nnet3/tdnn_lstm1c_sp/egs/egs_orig.3.35.ark exp/nnet3/tdnn_lstm1c_sp/egs/egs_orig.4.35.ark exp/nnet3/tdnn_lstm1c_sp/egs/egs_orig.5.35.ark exp/nnet3/tdnn_lstm1c_sp/egs/egs_orig.6.35.ark|' ark:exp/nnet3/tdnn_lstm1c_sp/egs/egs.35.ark 
+LOG (nnet3-shuffle-egs[5.5.0-]:main():nnet3-shuffle-egs.cc:103) Shuffled order of 20487 neural-network training examples 
+# Accounting: time=2 threads=1
+# Ended (code 0) at Thu Jul 30 10:00:30 KST 2020, elapsed time 2 seconds

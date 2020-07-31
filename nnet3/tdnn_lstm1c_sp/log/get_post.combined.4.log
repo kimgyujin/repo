@@ -1,0 +1,23 @@
+# nnet3-copy-egs ark:exp/nnet3/tdnn_lstm1c_sp/egs/egs.4.ark ark:- | nnet3-subset-egs --srand=4 --n=20000 ark:- ark:- | nnet3-merge-egs --minibatch-size=128 ark:- ark:- | nnet3-compute-from-egs --use-gpu=yes --apply-exp=true exp/nnet3/tdnn_lstm1c_sp/combined.mdl ark:- ark:- | matrix-sum-rows ark:- ark:- | vector-sum ark:- exp/nnet3/tdnn_lstm1c_sp/post.combined.4.vec 
+# Started at Thu Jul 30 13:13:58 KST 2020
+#
+matrix-sum-rows ark:- ark:- 
+vector-sum ark:- exp/nnet3/tdnn_lstm1c_sp/post.combined.4.vec 
+nnet3-subset-egs --srand=4 --n=20000 ark:- ark:- 
+nnet3-compute-from-egs --use-gpu=yes --apply-exp=true exp/nnet3/tdnn_lstm1c_sp/combined.mdl ark:- ark:- 
+nnet3-merge-egs --minibatch-size=128 ark:- ark:- 
+nnet3-copy-egs ark:exp/nnet3/tdnn_lstm1c_sp/egs/egs.4.ark ark:- 
+LOG (nnet3-compute-from-egs[5.5.0-]:SelectGpuId():cu-device.cc:223) CUDA setup operating under Compute Exclusive Mode.
+LOG (nnet3-compute-from-egs[5.5.0-]:FinalizeActiveGpu():cu-device.cc:308) The active GPU is [0]: TITAN Xp	free:11808M, used:386M, total:12194M, free/total:0.968337 version 6.1
+WARNING (nnet3-compute-from-egs[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-copy-egs[5.5.0-]:main():nnet3-copy-egs.cc:431) Read 20521 neural-network training examples, wrote 20521, 0 examples had errors.
+LOG (nnet3-subset-egs[5.5.0-]:main():nnet3-subset-egs.cc:91) Selected a subset of 20000 out of 20521 neural-network training examples 
+LOG (nnet3-merge-egs[5.5.0-]:PrintSpecificStats():nnet-example-utils.cc:1159) Merged specific eg types as follows [format: <eg-size1>={<mb-size1>-><num-minibatches1>,<mbsize2>-><num-minibatches2>.../d=<num-discarded>},<egs-size2>={...},... (note,egs-size == number of input frames including context).
+LOG (nnet3-merge-egs[5.5.0-]:PrintSpecificStats():nnet-example-utils.cc:1189) 50={128->2,d=103},60={128->2,d=25},70={128->6,d=92},90={128->4,d=20},100={128->6,d=36},110={128->134,d=12}
+LOG (nnet3-merge-egs[5.5.0-]:PrintAggregateStats():nnet-example-utils.cc:1155) Processed 20000 egs of avg. size 105.6 into 154 minibatches, discarding 1.44% of egs.  Avg minibatch size was 128, #distinct types of egs/minibatches was 6/6
+LOG (nnet3-compute-from-egs[5.5.0-]:main():nnet3-compute-from-egs.cc:133) Processed 154 examples.
+LOG (nnet3-compute-from-egs[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.265 seconds taken in nnet3 compilation total (breakdown: 0.145 compilation, 0.0612 optimization, 0.0186 shortcut expansion, 0.0116 checking, 0.00155 computing indexes, 0.0271 misc.) + 0 I/O.
+LOG (matrix-sum-rows[5.5.0-]:main():matrix-sum-rows.cc:67) Summed rows 154 matrices, 762880 rows in total.
+LOG (vector-sum[5.5.0-]:TypeTwoUsage():vector-sum.cc:143) Summed 154 vectors, 0 with errors; wrote sum to exp/nnet3/tdnn_lstm1c_sp/post.combined.4.vec
+# Accounting: time=28 threads=1
+# Ended (code 0) at Thu Jul 30 13:14:26 KST 2020, elapsed time 28 seconds

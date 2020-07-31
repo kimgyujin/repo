@@ -1,0 +1,7 @@
+# vector-sum exp/nnet3/tdnn_lstm1c_sp/post.combined.1.vec exp/nnet3/tdnn_lstm1c_sp/post.combined.10.vec exp/nnet3/tdnn_lstm1c_sp/post.combined.2.vec exp/nnet3/tdnn_lstm1c_sp/post.combined.3.vec exp/nnet3/tdnn_lstm1c_sp/post.combined.4.vec exp/nnet3/tdnn_lstm1c_sp/post.combined.5.vec exp/nnet3/tdnn_lstm1c_sp/post.combined.6.vec exp/nnet3/tdnn_lstm1c_sp/post.combined.7.vec exp/nnet3/tdnn_lstm1c_sp/post.combined.8.vec exp/nnet3/tdnn_lstm1c_sp/post.combined.9.vec exp/nnet3/tdnn_lstm1c_sp/post.combined.vec 
+# Started at Thu Jul 30 13:15:23 KST 2020
+#
+vector-sum exp/nnet3/tdnn_lstm1c_sp/post.combined.1.vec exp/nnet3/tdnn_lstm1c_sp/post.combined.10.vec exp/nnet3/tdnn_lstm1c_sp/post.combined.2.vec exp/nnet3/tdnn_lstm1c_sp/post.combined.3.vec exp/nnet3/tdnn_lstm1c_sp/post.combined.4.vec exp/nnet3/tdnn_lstm1c_sp/post.combined.5.vec exp/nnet3/tdnn_lstm1c_sp/post.combined.6.vec exp/nnet3/tdnn_lstm1c_sp/post.combined.7.vec exp/nnet3/tdnn_lstm1c_sp/post.combined.8.vec exp/nnet3/tdnn_lstm1c_sp/post.combined.9.vec exp/nnet3/tdnn_lstm1c_sp/post.combined.vec 
+LOG (vector-sum[5.5.0-]:TypeThreeUsage():vector-sum.cc:175) Summed 10 vectors; wrote sum to exp/nnet3/tdnn_lstm1c_sp/post.combined.vec
+# Accounting: time=0 threads=1
+# Ended (code 0) at Thu Jul 30 13:15:23 KST 2020, elapsed time 0 seconds

@@ -1,0 +1,6 @@
+# sum-lda-accs exp/nnet3/tdnn_lstm1c_sp/lda_stats exp/nnet3/tdnn_lstm1c_sp/1.lda_stats exp/nnet3/tdnn_lstm1c_sp/2.lda_stats exp/nnet3/tdnn_lstm1c_sp/3.lda_stats exp/nnet3/tdnn_lstm1c_sp/4.lda_stats exp/nnet3/tdnn_lstm1c_sp/5.lda_stats exp/nnet3/tdnn_lstm1c_sp/6.lda_stats exp/nnet3/tdnn_lstm1c_sp/7.lda_stats exp/nnet3/tdnn_lstm1c_sp/8.lda_stats exp/nnet3/tdnn_lstm1c_sp/9.lda_stats exp/nnet3/tdnn_lstm1c_sp/10.lda_stats 
+# Started at Thu Jul 30 10:01:02 KST 2020
+#
+sum-lda-accs exp/nnet3/tdnn_lstm1c_sp/lda_stats exp/nnet3/tdnn_lstm1c_sp/1.lda_stats exp/nnet3/tdnn_lstm1c_sp/2.lda_stats exp/nnet3/tdnn_lstm1c_sp/3.lda_stats exp/nnet3/tdnn_lstm1c_sp/4.lda_stats exp/nnet3/tdnn_lstm1c_sp/5.lda_stats exp/nnet3/tdnn_lstm1c_sp/6.lda_stats exp/nnet3/tdnn_lstm1c_sp/7.lda_stats exp/nnet3/tdnn_lstm1c_sp/8.lda_stats exp/nnet3/tdnn_lstm1c_sp/9.lda_stats exp/nnet3/tdnn_lstm1c_sp/10.lda_stats 
+# Accounting: time=0 threads=1
+# Ended (code 0) at Thu Jul 30 10:01:02 KST 2020, elapsed time 0 seconds

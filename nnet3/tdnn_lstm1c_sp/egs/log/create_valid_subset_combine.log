@@ -1,0 +1,7 @@
+# nnet3-subset-egs --n=0 ark:exp/nnet3/tdnn_lstm1c_sp/egs/valid_all.egs ark:exp/nnet3/tdnn_lstm1c_sp/egs/valid_combine.egs 
+# Started at Thu Jul 30 09:59:37 KST 2020
+#
+nnet3-subset-egs --n=0 ark:exp/nnet3/tdnn_lstm1c_sp/egs/valid_all.egs ark:exp/nnet3/tdnn_lstm1c_sp/egs/valid_combine.egs 
+LOG (nnet3-subset-egs[5.5.0-]:main():nnet3-subset-egs.cc:91) Selected a subset of 0 out of 12376 neural-network training examples 
+# Accounting: time=0 threads=1
+# Ended (code 0) at Thu Jul 30 09:59:37 KST 2020, elapsed time 0 seconds

@@ -1,0 +1,17 @@
+# nnet3-am-init exp/tri3b_ali_train_clean_5_sp/final.mdl exp/nnet3/tdnn_lstm1c_sp/0.raw - | nnet3-am-train-transitions - "ark:gunzip -c exp/tri3b_ali_train_clean_5_sp/ali.*.gz|" exp/nnet3/tdnn_lstm1c_sp/0.mdl 
+# Started at Thu Jul 30 10:01:06 KST 2020
+#
+nnet3-am-init exp/tri3b_ali_train_clean_5_sp/final.mdl exp/nnet3/tdnn_lstm1c_sp/0.raw - 
+nnet3-am-train-transitions - 'ark:gunzip -c exp/tri3b_ali_train_clean_5_sp/ali.*.gz|' exp/nnet3/tdnn_lstm1c_sp/0.mdl 
+WARNING (nnet3-am-init[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+WARNING (nnet3-am-init[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-am-init[5.5.0-]:main():nnet3-am-init.cc:96) Initialized am-nnet (neural net acoustic model) and wrote to -
+WARNING (nnet3-am-train-transitions[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-am-train-transitions[5.5.0-]:main():nnet3-am-train-transitions.cc:118) Accumulated transition stats from 184591 utterances.
+LOG (nnet3-am-train-transitions[5.5.0-]:MleUpdate():transition-model.cc:528) TransitionModel::Update, objf change is 0.000164805 per frame over 9.61877e+07 frames. 
+LOG (nnet3-am-train-transitions[5.5.0-]:MleUpdate():transition-model.cc:531) 107 probabilities floored, 9782 out of 16111 transition-states skipped due to insuffient data (it is normal to have some skipped.)
+LOG (nnet3-am-train-transitions[5.5.0-]:main():nnet3-am-train-transitions.cc:125) Transition model update: average 0.000164805 log-like improvement per frame over 9.61877e+07 frames.
+LOG (nnet3-am-train-transitions[5.5.0-]:main():nnet3-am-train-transitions.cc:131) Setting priors of pdfs in the model.
+LOG (nnet3-am-train-transitions[5.5.0-]:main():nnet3-am-train-transitions.cc:140) Trained transitions of neural network model and wrote it to exp/nnet3/tdnn_lstm1c_sp/0.mdl
+# Accounting: time=3 threads=1
+# Ended (code 0) at Thu Jul 30 10:01:09 KST 2020, elapsed time 3 seconds

@@ -1,0 +1,87 @@
+# nnet3-latgen-faster-parallel --num-threads=4 --online-ivectors=scp:exp/nnet3/ivectors_dev_clean_2_hires/ivector_online.scp --online-ivector-period=10 --frames-per-chunk=40 --extra-left-context=40 --extra-right-context=0 --extra-left-context-initial=0 --extra-right-context-final=0 --minimize=false --max-active=7000 --min-active=200 --beam=15.0 --lattice-beam=8.0 --acoustic-scale=0.1 --allow-partial=true --word-symbol-table=exp/tri3b/graph_tgsmall/words.txt exp/nnet3/tdnn_lstm1c_sp/final.mdl exp/tri3b/graph_tgsmall/HCLG.fst "ark,s,cs:apply-cmvn --norm-means=false --norm-vars=false --utt2spk=ark:data/dev_clean_2_hires/split38/14/utt2spk scp:data/dev_clean_2_hires/split38/14/cmvn.scp scp:data/dev_clean_2_hires/split38/14/feats.scp ark:- |" "ark:|gzip -c >exp/nnet3/tdnn_lstm1c_sp/decode_tgsmall_dev_clean_2/lat.14.gz" 
+# Started at Thu Jul 30 13:16:57 KST 2020
+#
+nnet3-latgen-faster-parallel --num-threads=4 --online-ivectors=scp:exp/nnet3/ivectors_dev_clean_2_hires/ivector_online.scp --online-ivector-period=10 --frames-per-chunk=40 --extra-left-context=40 --extra-right-context=0 --extra-left-context-initial=0 --extra-right-context-final=0 --minimize=false --max-active=7000 --min-active=200 --beam=15.0 --lattice-beam=8.0 --acoustic-scale=0.1 --allow-partial=true --word-symbol-table=exp/tri3b/graph_tgsmall/words.txt exp/nnet3/tdnn_lstm1c_sp/final.mdl exp/tri3b/graph_tgsmall/HCLG.fst 'ark,s,cs:apply-cmvn --norm-means=false --norm-vars=false --utt2spk=ark:data/dev_clean_2_hires/split38/14/utt2spk scp:data/dev_clean_2_hires/split38/14/cmvn.scp scp:data/dev_clean_2_hires/split38/14/feats.scp ark:- |' 'ark:|gzip -c >exp/nnet3/tdnn_lstm1c_sp/decode_tgsmall_dev_clean_2/lat.14.gz' 
+WARNING (nnet3-latgen-faster-parallel[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 2 orphan nodes.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 3 orphan components.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:Collapse():nnet-utils.cc:1472) Added 1 components, removed 3
+apply-cmvn --norm-means=false --norm-vars=false --utt2spk=ark:data/dev_clean_2_hires/split38/14/utt2spk scp:data/dev_clean_2_hires/split38/14/cmvn.scp scp:data/dev_clean_2_hires/split38/14/feats.scp ark:- 
+251-118436-0000 HE WAS YOUNG NO SPEAR HAD TOUCHED HIM NO POISONED LOOK IN HIS WINE 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0000 is 0.391813 over 624 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.455 seconds taken in nnet3 compilation total (breakdown: 0.193 compilation, 0.179 optimization, 0 shortcut expansion, 0.0762 checking, 3e-05 computing indexes, 0.00768 misc.) + 0 I/O.
+251-118436-0001 I TELL YOU IT IS NOT POISONED SHE CRIED 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0001 is 0.451985 over 371 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.426 seconds taken in nnet3 compilation total (breakdown: 0.257 compilation, 0.0955 optimization, 0 shortcut expansion, 0.0438 checking, 1e-05 computing indexes, 0.0299 misc.) + 0 I/O.
+251-118436-0002 SINCE HIS BIRTH HE HAS BEEN GUARDED SO CLOSELY THAT THE CLEVEREST POISONERS OF THE EAST COULD NOT REACH HIM 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0002 is 0.430459 over 695 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.451 seconds taken in nnet3 compilation total (breakdown: 0.27 compilation, 0.127 optimization, 0 shortcut expansion, 0.0393 checking, 7.87e-06 computing indexes, 0.0147 misc.) + 0 I/O.
+251-118436-0003 AS YOU WILL KNOW THE RIGHT TEN MEN AND TEN WOMEN WHO SOLD DUTY IS TO TASTE HIS FOOD AND WINE AND FIFTY ARMED WARRIORS GUARD HIS CHAMBER AS THEY GUARDED NOW 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0003 is 0.428529 over 1100 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.479 seconds taken in nnet3 compilation total (breakdown: 0.223 compilation, 0.177 optimization, 0 shortcut expansion, 0.0489 checking, 1.12e-05 computing indexes, 0.0294 misc.) + 0 I/O.
+251-118436-0004 A LOW CONFUSED MON WEANED FROM HIS MOUTH 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0004 is 0.419104 over 331 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.374 seconds taken in nnet3 compilation total (breakdown: 0.168 compilation, 0.144 optimization, 0 shortcut expansion, 0.032 checking, 1.6e-05 computing indexes, 0.0305 misc.) + 0 I/O.
+251-118436-0005 THE MAN SHRUGGED HIS BROAD SHOULDERS AND TURNED BACK INTO THE ARABESQUE CHAMBER 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0005 is 0.454023 over 529 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.284 seconds taken in nnet3 compilation total (breakdown: 0.137 compilation, 0.112 optimization, 0 shortcut expansion, 0.0315 checking, 1.29e-05 computing indexes, 0.00438 misc.) + 0 I/O.
+251-118436-0006 THIS MAN WAS CLAD IN A BROWN CAMEL HAIR ROBE AND SANDALS AND A GREEN TURBAN WAS ON HIS HEAD 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0006 is 0.443868 over 695 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.37 seconds taken in nnet3 compilation total (breakdown: 0.157 compilation, 0.139 optimization, 0 shortcut expansion, 0.0399 checking, 1.22e-05 computing indexes, 0.0343 misc.) + 0 I/O.
+251-118436-0007 NOT UNTIL THE HEAVENS WERE IN THE PROPER ORDER COULD THEY PERFORM THIS NECROMANCY 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0007 is 0.431829 over 543 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.332 seconds taken in nnet3 compilation total (breakdown: 0.11 compilation, 0.16 optimization, 0 shortcut expansion, 0.0315 checking, 1.22e-05 computing indexes, 0.0302 misc.) + 0 I/O.
+251-118436-0008 WITH A LONG STAINED FINGERNAIL HE MAP THE CONSTELLATIONS IN THE MARBLE TILED FLOOR 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0008 is 0.421828 over 621 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.337 seconds taken in nnet3 compilation total (breakdown: 0.166 compilation, 0.127 optimization, 0 shortcut expansion, 0.0378 checking, 1.22e-05 computing indexes, 0.00606 misc.) + 0 I/O.
+251-118436-0009 THE SLANT OF THE MOON PRESAGED EVIL FOR THE KING OF INDIA THE STARS ARE IN TURMOIL THE SERPENT IN THE HOUSE OF THE ELEPHANT 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0009 is 0.421419 over 894 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.303 seconds taken in nnet3 compilation total (breakdown: 0.142 compilation, 0.123 optimization, 0 shortcut expansion, 0.00786 checking, 1e-05 computing indexes, 0.0303 misc.) + 0 I/O.
+251-118436-0010 POINT OF CONTACT INQUIRED THE OTHER 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0010 is 0.378418 over 323 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.425 seconds taken in nnet3 compilation total (breakdown: 0.23 compilation, 0.158 optimization, 0 shortcut expansion, 0.0317 checking, 1.72e-05 computing indexes, 0.00528 misc.) + 0 I/O.
+251-118436-0011 ALL DISCARDED PORTIONS OF THE HUMAN BODY STILL REMAIN PART OF IT ATTACHED TO IT BY INTANGIBLE CONNECTIONS 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0011 is 0.427812 over 745 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.408 seconds taken in nnet3 compilation total (breakdown: 0.224 compilation, 0.108 optimization, 0 shortcut expansion, 0.045 checking, 1.29e-05 computing indexes, 0.0306 misc.) + 0 I/O.
+LOG (apply-cmvn[5.5.0-]:main():apply-cmvn.cc:81) Copied 24 utterances.
+251-118436-0012 BUT AT THE URGENT ENTREATY OF THE PRINCES OF COURSE ALLAH WHO LOVED BORNE THE CHARRED VAINLY HE GAVE HER A LOCK OF HIS LONG BLACK HAIR AS A TOKEN OF REMEMBRANCE 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0012 is 0.423018 over 1109 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.488 seconds taken in nnet3 compilation total (breakdown: 0.251 compilation, 0.144 optimization, 0 shortcut expansion, 0.061 checking, 1.19e-05 computing indexes, 0.0324 misc.) + 0 I/O.
+251-118436-0013 BY WHICH A SOUL IS DRAWN FROM ITS BODY AND ACROSS GULFS OF ECHOING SPACE RETURNED THE MAN ON THE MATT 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0013 is 0.406449 over 821 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.374 seconds taken in nnet3 compilation total (breakdown: 0.119 compilation, 0.164 optimization, 0 shortcut expansion, 0.0578 checking, 1.19e-05 computing indexes, 0.032 misc.) + 0 I/O.
+251-118436-0014 ON THE DAY AS UNDER THE GOLDEN DOME THE KING CRIED OUT AGAIN RACKED BY AWFUL BROCK'S ISMS 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0014 is 0.400617 over 667 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.685 seconds taken in nnet3 compilation total (breakdown: 0.218 compilation, 0.312 optimization, 0 shortcut expansion, 0.119 checking, 1.5e-05 computing indexes, 0.0361 misc.) + 0 I/O.
+251-118436-0015 THEY SEEK TO SNUB THE SILVER CORD THAT BOY'S ME TO MY DYING BODY 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0015 is 0.419553 over 536 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.288 seconds taken in nnet3 compilation total (breakdown: 0.12 compilation, 0.11 optimization, 0 shortcut expansion, 0.028 checking, 1.03e-05 computing indexes, 0.0296 misc.) + 0 I/O.
+251-118436-0016 THEY CLUSTER AROUND ME THEIR HANDS ARE TALONED THEIR EYES ARE RED LIKE FLAME BURNING IN DARKNESS 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0016 is 0.432204 over 895 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.396 seconds taken in nnet3 compilation total (breakdown: 0.176 compilation, 0.133 optimization, 0 shortcut expansion, 0.00808 checking, 1.1e-05 computing indexes, 0.0787 misc.) + 0 I/O.
+251-118436-0017 THEIR FINGERS SERE ME LIKE FIRE 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0017 is 0.406949 over 287 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.324 seconds taken in nnet3 compilation total (breakdown: 0.141 compilation, 0.13 optimization, 0 shortcut expansion, 0.0235 checking, 1.31e-05 computing indexes, 0.0298 misc.) + 0 I/O.
+251-118436-0018 I KNOW NOW WHAT BRINGS ME TO THE PYRE 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0018 is 0.374845 over 281 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.338 seconds taken in nnet3 compilation total (breakdown: 0.136 compilation, 0.141 optimization, 0 shortcut expansion, 0.0314 checking, 1.12e-05 computing indexes, 0.0297 misc.) + 0 I/O.
+251-118436-0019 THERE THEY STROVE TO BREAK THE SILVER CHORD OF LIFE AND THRUST MY SOUL INTO THE BODY OF A FALL NIGHT WE ARE TO THEIR SORCERY SUMMONED UP FROM HELL AH 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0019 is 0.438334 over 1146 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.391 seconds taken in nnet3 compilation total (breakdown: 0.135 compilation, 0.139 optimization, 0 shortcut expansion, 0.0975 checking, 1.22e-05 computing indexes, 0.0203 misc.) + 0 I/O.
+251-118436-0020 YOUR CRY AND THE GRIP OF YOUR FINGERS BROUGHT ME BACK BUT I AM GOING FAST 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0020 is 0.435918 over 554 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.411 seconds taken in nnet3 compilation total (breakdown: 0.18 compilation, 0.19 optimization, 0 shortcut expansion, 0.0335 checking, 1.38e-05 computing indexes, 0.00687 misc.) + 0 I/O.
+251-118436-0021 THERE WAS THE OLD IMPERIOUS NOTE IN HIS FAILING WHISPER 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0021 is 0.421696 over 396 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.413 seconds taken in nnet3 compilation total (breakdown: 0.178 compilation, 0.194 optimization, 0 shortcut expansion, 0.0343 checking, 1.1e-05 computing indexes, 0.00736 misc.) + 0 I/O.
+251-118436-0022 YOU HAVE NEVER DISOBEYED ME OBEY MY LAST COMMAND 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0022 is 0.431988 over 452 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.324 seconds taken in nnet3 compilation total (breakdown: 0.159 compilation, 0.14 optimization, 0 shortcut expansion, 0.0196 checking, 1.22e-05 computing indexes, 0.00455 misc.) + 0 I/O.
+251-118436-0023 SEND MY SOUL CLEANED WAIHOURA 
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance 251-118436-0023 is 0.375 over 275 frames.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 0.532 seconds taken in nnet3 compilation total (breakdown: 0.252 compilation, 0.18 optimization, 0 shortcut expansion, 0.00975 checking, 1.1e-05 computing indexes, 0.0901 misc.) + 0 I/O.
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:main():nnet3-latgen-faster-parallel.cc:264) Time taken 110.647s: real-time factor assuming 100 feature frames/sec is 2.97237
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:main():nnet3-latgen-faster-parallel.cc:268) Done 24 utterances, failed for 0
+LOG (nnet3-latgen-faster-parallel[5.5.0-]:main():nnet3-latgen-faster-parallel.cc:270) Overall log-likelihood per frame is 0.422923 over 14890 frames.
+# Accounting: time=113 threads=1
+# Ended (code 0) at Thu Jul 30 13:18:50 KST 2020, elapsed time 113 seconds

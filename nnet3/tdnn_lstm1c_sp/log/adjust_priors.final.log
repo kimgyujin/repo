@@ -1,0 +1,10 @@
+# nnet3-am-adjust-priors exp/nnet3/tdnn_lstm1c_sp/combined.mdl exp/nnet3/tdnn_lstm1c_sp/post.combined.vec exp/nnet3/tdnn_lstm1c_sp/final.mdl 
+# Started at Thu Jul 30 13:15:23 KST 2020
+#
+nnet3-am-adjust-priors exp/nnet3/tdnn_lstm1c_sp/combined.mdl exp/nnet3/tdnn_lstm1c_sp/post.combined.vec exp/nnet3/tdnn_lstm1c_sp/final.mdl 
+WARNING (nnet3-am-adjust-priors[5.5.0-]:Check():nnet-nnet.cc:789) Node lda.delayed is never used to compute any output.
+LOG (nnet3-am-adjust-priors[5.5.0-]:PrintPriorDiagnostics():nnet3-am-adjust-priors.cc:58) Adjusting priors: largest absolute difference was for pdf 44, 0.0906154 -> 0.08639
+LOG (nnet3-am-adjust-priors[5.5.0-]:PrintPriorDiagnostics():nnet3-am-adjust-priors.cc:61) Adjusting priors: K-L divergence from old to new is 0.00171524
+LOG (nnet3-am-adjust-priors[5.5.0-]:main():nnet3-am-adjust-priors.cc:137) Modified priors of neural network model and wrote it to exp/nnet3/tdnn_lstm1c_sp/final.mdl
+# Accounting: time=0 threads=1
+# Ended (code 0) at Thu Jul 30 13:15:23 KST 2020, elapsed time 0 seconds
